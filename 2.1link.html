@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hyperlink</title>
+    <style>
+        body{
+            width: 80vw;
+            margin: 0 auto;
+        }
+        h1 {
+            width: 80vw;
+            margin: 25px auto;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .links {
+            width: 80vw;
+            margin: 10px auto;
+            display: flex;
+            gap: 15px;
+
+        }
+        a {
+            padding: 5px;
+            border: 1px solid black;
+            border-radius: 8px;
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: black;
+            font-weight: 700;
+            cursor: pointer;
+            
+        }
+        img{
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Learning HyperLink</h1>
+    <div class="links">
+
+        <a href="https://chatgpt.com/">ChatGPT</a>
+        <a href="https://copilot.microsoft.com/chats/oZ2v16gsuuo4vSzmAUjNE">Copilot</a>
+        <a href="https://gemini.google.com/app">Gemini</a>
+        <a href="https://grok.com/">Grok</a>
+        <a href="https://www.perplexity.ai/">Perplexity</a>
+    </div>
+    <div class="photo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoFRQjM-wM_nXMA03AGDXgJK3VeX7vtD3ctA&s" alt="" srcset="" usemap="#redirect">
+        <map name="redirect">
+
+            <area shape="rect" coords="10,10,200,100" target="_blank" href="https://www.perplexity.ai/" alt="" >
+        </map>
+    </div>
+</body>
+</html>

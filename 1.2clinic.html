@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health Care Clinic</title>
+  <style>
+    /* RESET & BASE */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #eef2f5;
+      color: #333;
+      padding: 20px;
+      max-width: 100vw;
+      overflow-x: hidden;
+    }
+
+    /* NOTIFICATIONS BANNER */
+    .banner {
+      display: inline-block;
+      background-color: #ffebee;
+      color: #b71c1c;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-left: 6px solid #d32f2f;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .banner .icon {
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
+
+    .banner a {
+      color: #b71c1c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .banner a:hover {
+      text-decoration: underline;
+    }
+
+    /* HEADER */
+    .heading {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 2rem;
+      color: #004d40;
+    }
+
+    .heading u {
+      text-decoration-color: #009688;
+    }
+
+    /* SERVICE SECTIONS */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .section {
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s;
+    }
+
+    .section:hover {
+      transform: translateY(-4px);
+    }
+
+    .section h2 {
+      margin-bottom: 10px;
+      color: #00796b;
+      font-size: 1.2rem;
+    }
+
+    .section ul {
+      list-style: disc inside;
+    }
+
+    .section li {
+      margin-bottom: 6px;
+    }
+
+    /* FOOTER INFO */
+    .footer {
+      background: #fff;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* IMAGE STYLING */
+    .hospital-img {
+      display: block;
+      margin: 20px auto;
+      max-width: 70vw;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+
+<body>
+  <marquee behavior="scroll" direction="left" scrollamount="6">
+    <div class="banner">
+      <span class="icon">🚨</span>
+      <strong>24/7 Emergency Services Available</strong> — Call us now at
+      <a href="tel:+9999999999">+9999999999</a>
+    </div>
+  </marquee>
+
+  <h1 class="heading">Welcome to Our <u>Health Care Clinic</u></h1>
+
+  <div class="services">
+    <div class="section">
+      <h2>Emergency &amp; Trauma</h2>
+      <ul>
+        <li>Emergency Room (ER)</li>
+        <li>Critical Injury Care</li>
+        <li>Ambulance &amp; Paramedics</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Inpatient Care</h2>
+      <ul>
+        <li>Medical &amp; Surgical Wards</li>
+        <li>Intensive Care Units (ICUs)</li>
+        <li>Maternity &amp; Pediatrics</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Outpatient Services</h2>
+      <ul>
+        <li>General Consultations</li>
+        <li>Specialty Clinics</li>
+        <li>Day Surgery &amp; Diagnostics</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Surgical Services</h2>
+      <ul>
+        <li>Elective &amp; Emergency Ops</li>
+        <li>Pre‑/Post‑Op Care</li>
+        <li>Anesthesia</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Diagnostics</h2>
+      <ul>
+        <li>Radiology &amp; Imaging</li>
+        <li>Lab Testing</li>
+        <li>Cardiac Services (ECG/Echo)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Maternity &amp; NICU</h2>
+      <ul>
+        <li>Labor &amp; Delivery</li>
+        <li>Neonatal ICU</li>
+        <li>Postnatal &amp; Lactation</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Rehabilitation</h2>
+      <ul>
+        <li>Physio &amp; Occupation Therapy</li>
+        <li>Speech Therapy</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Mental Health</h2>
+      <ul>
+        <li>Psychiatric Care</li>
+        <li>Counseling &amp; Therapy</li>
+        <li>Inpatient Psychiatry</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Pharmacy</h2>
+      <ul>
+        <li>On‑Site Pharmacy</li>
+        <li>Medication Management</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Preventive Care</h2>
+      <ul>
+        <li>Immunizations</li>
+        <li>Health Screening</li>
+        <li>Patient Education</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Specialized Medicine</h2>
+      <ul>
+        <li>Oncology, Cardiology, Neurology, Orthopedics</li>
+        <li>Dialysis</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Support Services</h2>
+      <ul>
+        <li>Nutrition &amp; Dietary</li>
+        <li>Social Work &amp; Case Mgmt</li>
+        <li>Palliative, Hospice &amp; Spiritual Care</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">🕒 Open Daily: 2:00 AM – 9:00 PM</div>
+
+  <img
+    src="https://plus.unsplash.com/premium_photo-1682145291930-43b73e27446e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2xpbmljfGVufDB8fDB8fHww"
+    alt="Hospital" class="hospital-img" />
+</body>
+
+</html>

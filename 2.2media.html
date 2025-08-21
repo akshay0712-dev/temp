@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Media Elements and Image Map Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .media-section {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Media Elements and Image Map Example</h1>
+
+    <div class="media-section">
+        <h2>Image Map</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Map_of_USA_with_state_names.svg" alt="USA Map"
+            usemap="#usamap" width="600">
+        <map name="usamap">
+            <area shape="rect" coords="70,180,170,230" href="https://en.wikipedia.org/wiki/California" alt="California"
+                target="_blank">
+            <area shape="rect" coords="400,150,500,200" href="https://en.wikipedia.org/wiki/New_York_(state)"
+                alt="New York" target="_blank">
+            <area shape="rect" coords="300,300,400,350" href="https://en.wikipedia.org/wiki/Texas" alt="Texas"
+                target="_blank">
+        </map>
+        <p>Click on California, New York, or Texas to learn more.</p>
+    </div>
+
+    <div class="media-section">
+        <h2>Embedded Audio</h2>
+        <audio controls>
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <div class="media-section">
+        <h2>Embedded Video</h2>
+        <video width="400" controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</body>
+
+</html>
