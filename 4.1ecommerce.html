@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Electronics Catalogue</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .catalogue-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+        }
+        .item-card {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 18px;
+            text-align: center;
+            transition: box-shadow 0.2s;
+        }
+        .item-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+        }
+        .item-img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 12px;
+        }
+        .item-title {
+            font-size: 1.1em;
+            color: #222;
+            margin-bottom: 8px;
+        }
+        .item-desc {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .item-price {
+            font-weight: bold;
+            color: #1976d2;
+            font-size: 1.1em;
+        }
+        .buy-btn {
+            margin-top: 12px;
+            padding: 8px 18px;
+            background: #1976d2;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.95em;
+            transition: background 0.2s;
+        }
+        .buy-btn:hover {
+            background: #1565c0;
+        }
+    </style>
+</head>
+<body>
+    <div class="catalogue-container">
+        <h1>Electronics Catalogue</h1>
+        <div class="items-grid">
+            <div class="item-card">
+                <img src="data:image/jpeg;base64,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" alt="Smartphone" class="item-img">
+                <div class="item-title">Smartphone</div>
+                <div class="item-desc">Latest Android smartphone with 128GB storage.</div>
+                <div class="item-price">$499</div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="item-card">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTaEDmd2if3ymd6i0Vnbh1kh1L8c7fXOZAqDCinYMlP1a0G2DIYvtBx0gr_2LNhlhDieixmCLmKTN8ejYSxgbZP7F79OGed2DCHe1F4-tTp" alt="Laptop" class="item-img">
+                <div class="item-title">Laptop</div>
+                <div class="item-desc">15.6" Full HD, Intel i5, 8GB RAM, 512GB SSD.</div>
+                <div class="item-price">$799</div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="item-card">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSTq6zFaLapEqqQniWKRsKSMabPt67CJuUI-KZiZZklATQtJlvv5RR1R_IwLgGGnW7sQ-GK4XC6VDflYQpRKJVbDcbgpqT1MOE1EIXqfWhW" alt="Headphones" class="item-img">
+                <div class="item-title">Wireless Headphones</div>
+                <div class="item-desc">Noise cancelling, 20hr battery life.</div>
+                <div class="item-price">$129</div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="item-card">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ4NSVMSonXi8luHvZTPei3O6Mn7SRSdi-V4e1TNY-v_e8i4zWi_DJultTslzRI2GlGhbaMsv7pFaahaE32Hkcv4gWPEbW8WaNpV3WydpI" alt="Smartwatch" class="item-img">
+                <div class="item-title">Smartwatch</div>
+                <div class="item-desc">Fitness tracking, heart rate monitor.</div>
+                <div class="item-price">$199</div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+            <div class="item-card">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTttei7XI-5DFSkwvJSJ9m6kZevgsAMepRWknLJH2A8WYKqOD2P3AyLNOt25N1_6P8e_kjtq-S8FgulietFjuQSlU_SdWr-UmptXVqJAPQslgdbBABerK8bKQ" alt="Bluetooth Speaker" class="item-img">
+                <div class="item-title">Bluetooth Speaker</div>
+                <div class="item-desc">Portable, waterproof, 12hr playtime.</div>
+                <div class="item-price">$59</div>
+                <button class="buy-btn">Buy Now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
