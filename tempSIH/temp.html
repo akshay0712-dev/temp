@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Signup</title>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <div class="text-center mt-10">
+      <h1
+        class="text-[#4F4F4F] text-[36px] font-['Kumbh_Sans'] font-semibold leading-[auto]"
+      >
+        Welcome, Log into your account
+      </h1>
+    </div>
+
+    <div
+      class="box-border bg-[#26432F] rounded-[8px] mx-auto my-12 w-full max-w-[512px] p-6 text-fcfafa h-[420px]"
+    >
+      <p
+        class="text-lg font-medium mb-6 leading-[25px] lg:ml-32 text-[#fcfafa]"
+      >
+        It's our great pleasure to have
+        <span class="md:ml-16"> you on board</span>
+      </p>
+
+      <div class="flex flex-col space-y-4">
+        <input
+          type="text"
+          placeholder="User Id"
+          class="rounded-[4px] bg-[#477a57] w-full max-w-[248px] mx-auto h-[42px] px-3 text-[#fcfafa] placeholder-[#fcfafa]"
+        />
+        <input
+          type="password"
+          placeholder="Enter Password"
+          class="rounded-[4px] bg-[#477a57] w-full max-w-[248px] mx-auto h-[42px] px-3 text-[#fcfafa] placeholder-[#fcfafa]"
+        />
+        <button
+          class="rounded-[4px] bg-[#0d0d10] w-full max-w-[248px] mx-auto h-[42px] text-[#fcfafa] font-medium hover:bg-[#1a1a1d] transition"
+        >
+          Login
+        </button>
+        <h1 class="text-[12px] text-center text-[#fcfafa] font-Inter">
+          Didn't have an account?
+          <span class="text-[#ffff] font-bold font-Inter cursor-pointer"
+            >Sign up</span
+          >
+        </h1>
+      </div>
+    </div>
+    <div class="w-full max-w-6xl mx-auto mt-10 px-4">
+      <div
+        class="flex flex-col sm:flex-row items-center justify-between text-center gap-4 sm:gap-0"
+      >
+        <div class="flex flex-col items-center md:mt-[50px]">
+          <div
+            class="w-6 h-6 rounded-full bg-[#26432F] text-white flex items-center justify-center sm:ml-[150px]"
+          >
+            ✓
+          </div>
+          <p class="mt-2 font-semibold text-gray-700 sm:ml-[100px]">
+            Your details
+          </p>
+          <p class="text-sm text-gray-500 sm:ml-[100px]">Name and email</p>
+        </div>
+
+        <div class="hidden sm:block flex-1 h-1 bg-gray-300 mx-2"></div>
+
+        <div class="flex flex-col items-center md:mt-[50px]">
+          <div
+            class="w-6 h-6 rounded-full bg-[#26432F] text-white flex items-center justify-center sm:-ml-[140px]"
+          >
+            ✓
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">Choose a password</p>
+          <p class="text-sm text-gray-500">Choose a secure password</p>
+        </div>
+
+        <div
+          class="hidden sm:block flex-1 h-1 bg-gray-300 mx-2 sm:-ml-[130px]"
+        ></div>
+
+        <div class="flex flex-col items-center md:mt-[50px] sm:-ml-[90px]">
+          <div
+            class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-400"
+          >
+            <div class="w-2 h-2 rounded-full bg-white"></div>
+          </div>
+          <p class="mt-2 font-semibold text-gray-700">
+            Re-Enter your Login Details
+          </p>
+          <p class="text-sm text-gray-500">For account verification</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Form</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <div class="mx-auto my-[10vh] flex h-[80vh] w-[80vw] justify-center bg-[#fafaf2d8]">
+  <form action="" class="flex flex-col justify-start ">
+    <h1 class="my-8 text-center font-serif text-2xl uppercase">
+      Student Information <br />
+      Form
+    </h1>
+    <label for="firstName" class="block text-sm/6 font-medium text-black">First Name:</label>
+    <input id="firstName" type="text" name="firstName" placeholder="" class="w-[50vw] border px-3" />
+
+    <label for="lastName" class="block text-sm/6 font-medium text-black">Last Name:</label>
+    <input id="lastName" type="text" name="lastName" placeholder="" class="w-[50vw] border px-3" />
+
+    <label for="email" class="block text-sm/6 font-medium text-black">Email :</label>
+    <input id="email" type="email" name="email" placeholder="" class="w-[50vw] border px-3" />
+
+    <label for="dob" class="block text-sm/6 font-medium text-black">Date of Birth :</label>
+    <input id="dob" type="date" name="dob" placeholder="" class="w-[50vw] border px-3" />
+    <br />
+
+    <label class="block text-sm/6 font-medium text-black">Gender :</label>
+    <input type="radio" id="male" name="gender" value="male" />
+    <label for="male">Male</label><br />
+    <input type="radio" id="female" name="gender" value="female" />
+    <label for="female">Female</label><br />
+    <input type="radio" id="other" name="gender" value="other" />
+    <label for="other">Other</label><br /><br />
+
+    <label for="course" class="block text-sm/6 font-medium text-black">Course :</label>
+    <select id="course" name="course" class="w-[50vw] rounded-md border px-3 py-1.5 text-base focus:outline-2 focus:-outline-offset-2">
+      <option value="cse">CSE</option>
+      <option value="ai-ml">AI & ML</option>
+      <option value="ece">ECE</option>
+      <option value="ee">EE</option>
+      <option value="me">ME</option>
+      <option value="civil">Civil</option>
+    </select>
+
+    <button type="submit" class="mt-6 w-[50vw] rounded-md bg-blue-600 py-2 text-white hover:bg-blue-700">Submit</button>
+  </form>
+</div>
+
+</body>
+
+</html>
