@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="flex justify-center items-center w-[100vw] h-[100vh] bg-[#f3eaea] ">
+        <div class="bg-white shadow-lg rounded-lg p-8 w-[80vw] sm:w-[50vw] md:w-[35vw] flex justify-center items-center flex-col">
+            <div class="border border-black w-full text-right px-3 py-2 min-h-[2.5rem] text-lg" id="calcInput"></div>
+            <div class="grid grid-cols-4 gap-3 mt-3 w-full items-center">
+                <button onclick="inputNum('1')" class="border px-3 py-2 flex justify-center items-center cursor-pointer hover:bg-gray-200 hover:font-bold rounded-md">1</button>
+                <button onclick="inputNum('2')" class="border px-3 py-2 flex justify-center items-center cursor-pointer hover:bg-gray-200 hover:font-bold rounded-md">2</button>
+                <button onclick="inputNum('3')" class="border px-3 py-2 flex justify-center items-center cursor-pointer hover:bg-gray-200 hover:font-bold rounded-md">3</button>
+                <button onclick="inputNum('+')" class="border px-3 py-2 flex justify-center items-center cursor-pointer hover:bg-gray-200 hover:font-bold rounded-md">+</button>
+            </div>
+            <div class="grid grid-cols-4 gap-3 mt-3 w-full items-center">
+                <button onclick="inputNum('4')" class="border px-3 py-2 flex justify-center items-center cursor-pointer hover:bg-gray-200 hover:font-bold rounded-md">4</button>
+                <button onclick="inputNum('5')" class="border px-3 py-2 flex justify-center items-center cursor-pointer hover:bg-gray-200 hover:font-bold rounded-md">5</button>
+                <button onclick="inputNum('6')" class="border px-3 py-2 flex justify-center items-center cursor-pointer hover:bg-gray-200 hover:font-bold rounded-md">6</button>
+                <button onclick="inputNum('-')" class="border px-3 py-2 flex justify-center items-center cursor-pointer hover:bg-gray-200 hover:font-bold rounded-md">-</button>
+            </div>
+            <div class="grid grid-cols-4 gap-3 mt-3 w-full items-center">
+                <button onclick="inputNum('7')" class="border px-3 py-2 flex justify-center items-center cursor-pointer hover:bg-gray-200 hover:font-bold rounded-md">7</button>
+                <button onclick="inputNum('8')" class="border px-3 py-2 flex justify-center items-center cursor-pointer hover:bg-gray-200 hover:font-bold rounded-md">8</button>
+                <button onclick="inputNum('9')" class="border px-3 py-2 flex justify-center items-center cursor-pointer hover:bg-gray-200 hover:font-bold rounded-md">9</button>
+                <button onclick="inputNum('*')" class="border px-3 py-2 flex justify-center items-center cursor-pointer hover:bg-gray-200 hover:font-bold rounded-md">*</button>
+            </div>
+            <div class="grid grid-cols-4 gap-3 mt-3 w-full items-center">
+                <button onclick="inputNum('0')" class="border px-3 py-2 flex justify-center items-center cursor-pointer hover:bg-gray-200 hover:font-bold rounded-md">0</button>
+                <button onclick="calculate()" class="border px-3 py-2 flex justify-center items-center cursor-pointer hover:bg-gray-200 hover:font-bold rounded-md">=</button>
+                <button onclick="inputNum('/')" class="border px-3 py-2 flex justify-center items-center cursor-pointer hover:bg-gray-200 hover:font-bold rounded-md">/</button>
+                <button onclick="inputNum('.')" class="border px-3 py-2 flex justify-center items-center cursor-pointer hover:bg-gray-200 hover:font-bold rounded-md">.</button>
+            </div>
+            <div class="grid grid-cols-2 gap-3 mt-3 w-full items-center">
+                <button onclick="clearInput()" class="border px-3 py-2 flex justify-center items-center cursor-pointer hover:bg-red-200 hover:font-bold rounded-md w-full">C</button>
+                <button onclick="backspace()" class="border px-3 py-2 flex justify-center items-center cursor-pointer hover:bg-gray-200 hover:font-bold rounded-md w-full">⌫</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function inputNum(val) {
+        const input = document.getElementById("calcInput");
+        const operators = ['+', '-', '*', '/'];
+        const lastChar = input.innerText.slice(-1);
+
+        if (operators.includes(val)) {
+            if (input.innerText === "" || operators.includes(lastChar)) {
+                return;
+            }
+        }
+        if (val === '.') {
+            let lastOpIndex = Math.max(
+                input.innerText.lastIndexOf('+'),
+                input.innerText.lastIndexOf('-'),
+                input.innerText.lastIndexOf('*'),
+                input.innerText.lastIndexOf('/')
+            );
+            let lastNumber = input.innerText.slice(lastOpIndex + 1);
+            if (lastNumber.includes('.')) {
+                return;
+            }
+        }
+        input.innerText += val;
+    }
+
+    function clearInput() {
+        document.getElementById("calcInput").innerText = "";
+    }
+
+    function backspace() {
+        const input = document.getElementById("calcInput");
+        input.innerText = input.innerText.slice(0, -1);
+    }
+
+    function calculate() {
+        const input = document.getElementById("calcInput");
+        try {
+            if (/^[0-9+\-*/.() ]+$/.test(input.innerText)) {
+                input.innerText = eval(input.innerText);
+            } else {
+                input.innerText = "Error";
+            }
+        } catch {
+            input.innerText = "Error";
+        }
+    }
+</script>
+
+</html>
