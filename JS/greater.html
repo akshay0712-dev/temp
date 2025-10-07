@@ -1,0 +1,37 @@
+<!-- 3> WAP to compare two number using JS and display which is greater -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Form</title>
+</head>
+<body class="min-h-screen bg-gray-50 flex flex-col items-center justify-center">
+    <div class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
+        <h2 class="text-center font-bold text-2xl mb-6 text-gray-800">Compare Two Numbers</h2>
+        <div class="flex flex-col gap-4">
+            <input type="text" name="num1" id="num1" placeholder="Enter first number" class="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition" />
+            <input type="text" name="num2" id="num2" placeholder="Enter second number" class="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 transition" />
+            <button onclick="checkGreater()" class="bg-blue-600 text-white font-semibold rounded px-4 py-2 hover:bg-blue-700 transition">Check Greater</button>
+        </div>
+        <div id="result" class="mt-6 text-center text-green-700 font-medium"></div>
+    </div>
+</body>
+<script>
+    function checkGreater(){
+        num1 =  Number(document.getElementById("num1").value)
+        num2 =  Number(document.getElementById("num2").value)
+        if (num1 > num2) {
+            document.getElementById("result").innerHTML = `${num1} is greater`
+            
+        } else {
+             document.getElementById("result").innerHTML = `${num2} is greater`
+        }
+    }
+</script>
+
+
+
+</html>
